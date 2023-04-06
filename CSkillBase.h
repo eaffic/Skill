@@ -1,6 +1,6 @@
 /*
 * @fileName:	CSkillBase.h
-* @brief:		ã‚¹ã‚­ãƒ«åŸºåº•ã‚¯ãƒ©ã‚¹ãƒ˜ãƒƒãƒ€ãƒ•ã‚¡ã‚¤ãƒ«
+* @brief:		ƒXƒLƒ‹Šî’êƒNƒ‰ƒXƒwƒbƒ_ƒtƒ@ƒCƒ‹
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
@@ -11,7 +11,7 @@
 #include <chrono>
 
 /// <summary>
-/// ã‚¹ã‚­ãƒ«åŸºåº•ã‚¯ãƒ©ã‚¹
+/// ƒXƒLƒ‹Šî’êƒNƒ‰ƒX
 /// </summary>
 class CSkillBase {
 public:
@@ -25,9 +25,9 @@ public:
 	std::string getName() const;
 
 protected:
-	std::string m_skillName;		//ã‚¹ã‚­ãƒ«å
-	int m_baseDamage;				//åŸºåº•ãƒ€ãƒ¡ãƒ¼ã‚¸
-	int m_addDamage;				//å¤‰å‹•ãƒ€ãƒ¡ãƒ¼ã‚¸
-	int m_baseDamageCount;			//åŸºåº•ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°
-	int m_addDamageCount;			//å¤‰å‹•ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°
+	std::string m_skillName;		//ƒXƒLƒ‹–¼
+	int m_baseDamage;				//Šî’êƒ_ƒ[ƒW
+	int m_addDamage;				//•Ï“®ƒ_ƒ[ƒW
+	int m_baseDamageCount;			//Šî’êƒ_ƒ[ƒW‰ñ”
+	int m_addDamageCount;			//•Ï“®ƒ_ƒ[ƒW‰ñ”
 };

@@ -1,13 +1,13 @@
 /*
 * @fileName:	CSkillRock.cpp
-* @brief:		ã‚¹ã‚­ãƒ«(å²©)ã‚¯ãƒ©ã‚¹
+* @brief:		ƒXƒLƒ‹(Šâ)ƒNƒ‰ƒX
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
 #include "CSkillRock.h"
 
 CSkillRock::CSkillRock() {
-	this->m_skillName = "å²©";
+	this->m_skillName = "Šâ";
 	this->m_baseDamage = 10;
 	this->m_addDamage = 10;
 	this->m_baseDamageCount = 2;
@@ -15,7 +15,7 @@ CSkillRock::CSkillRock() {
 }
 
 CSkillRock::~CSkillRock() {
-	std::cout << "CSkillRock ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿" << std::endl;
+	std::cout << "CSkillRock ƒfƒXƒgƒ‰ƒNƒ^" << std::endl;
 }
 
 void CSkillRock::use() {
@@ -23,17 +23,17 @@ void CSkillRock::use() {
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤å–å¾—
+/// ƒ_ƒ[ƒW’læ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤</returns>
+/// <returns>ƒ_ƒ[ƒW’l</returns>
 int CSkillRock::getDamage() const {
 	return this->m_baseDamage + (rand() % (this->m_addDamage + 1));
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°å–å¾—
+/// ƒ_ƒ[ƒW‰ñ”æ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°</returns>
+/// <returns>ƒ_ƒ[ƒW‰ñ”</returns>
 int CSkillRock::getDamageCount() const {
 	return this->m_baseDamageCount + (rand() % (this->m_addDamageCount + 1));
 }

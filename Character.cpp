@@ -1,33 +1,33 @@
 /*
 * @fileName:	Character.h
-* @brief:		ã‚­ãƒ£ãƒ©ã‚¯ã‚¿åŸºåº•ã‚¯ãƒ©ã‚¹ãƒ˜ãƒƒãƒ€ãƒ•ã‚¡ã‚¤ãƒ«
+* @brief:		ƒLƒƒƒ‰ƒNƒ^Šî’êƒNƒ‰ƒXƒwƒbƒ_ƒtƒ@ƒCƒ‹
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
 #include "Character.h"
 
-static const std::string INPUTKEYWORD_SETUP = "setup";		//<å…¥åŠ›ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰>è£…å‚™å¤‰æ›´
-static const std::string INPUTKEYWORD_USE = "use";			//<å…¥åŠ›ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰>ã‚¹ã‚­ãƒ«ä½¿ç”¨
-static const std::string INPUTKEYWORD_EXIT = "exit";		//<å…¥åŠ›ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰>ãƒ—ãƒ­ã‚¯ãƒ©ãƒ çµ‚äº†
+static const std::string INPUTKEYWORD_SETUP = "setup";		//<“ü—ÍƒL[ƒ[ƒh>‘•”õ•ÏX
+static const std::string INPUTKEYWORD_USE = "use";			//<“ü—ÍƒL[ƒ[ƒh>ƒXƒLƒ‹g—p
+static const std::string INPUTKEYWORD_EXIT = "exit";		//<“ü—ÍƒL[ƒ[ƒh>ƒvƒƒNƒ‰ƒ€I—¹
 
-static const std::string INPUTKEYWORD_FIRE = "fire";		//<å…¥åŠ›ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰>ç«
-static const std::string INPUTKEYWORD_ICE = "ice";			//<å…¥åŠ›ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰>æ°·
-static const std::string INPUTKEYWORD_ROCK = "rock";		//<å…¥åŠ›ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰>å²©
+static const std::string INPUTKEYWORD_FIRE = "fire";		//<“ü—ÍƒL[ƒ[ƒh>‰Î
+static const std::string INPUTKEYWORD_ICE = "ice";			//<“ü—ÍƒL[ƒ[ƒh>•X
+static const std::string INPUTKEYWORD_ROCK = "rock";		//<“ü—ÍƒL[ƒ[ƒh>Šâ
 
 Character::Character() {
 	this->equipedSkill = nullptr;
 }
 
 Character::~Character() {
-	std::cout << "Characterãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿" << std::endl;
+	std::cout << "CharacterƒfƒXƒgƒ‰ƒNƒ^" << std::endl;
 
 	this->resetSkill();
 }
 
 /// <summary>
-/// è£…å‚™å¤‰æ›´
+/// ‘•”õ•ÏX
 /// </summary>
-/// <param name="type">ç›®æ¨™ã‚¹ã‚­ãƒ«</param>
+/// <param name="type">–Ú•WƒXƒLƒ‹</param>
 void Character::setup(SkillType type) {
 	switch (type) {
 	case SkillType::Fire:
@@ -46,46 +46,46 @@ void Character::setup(SkillType type) {
 		break;
 	}
 
-	std::cout << this->equipedSkill->getName() << " ã‚’è£…å‚™ã—ã¾ã—ãŸ" << std::endl;
+	std::cout << this->equipedSkill->getName() << " ‚ğ‘•”õ‚µ‚Ü‚µ‚½" << std::endl;
 }
 
 /// <summary>
-/// ã‚­ãƒ£ãƒ©çŠ¶æ…‹æ›´æ–°
+/// ƒLƒƒƒ‰ó‘ÔXV
 /// </summary>
-/// <returns>æ›´æ–°ç¶™ç¶š</returns>
+/// <returns>XVŒp‘±</returns>
 bool Character::update() {
 	std::string action;
-	std::cout << "è¡Œå‹•ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ï¼š ";
+	std::cout << "s“®‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢F ";
 	std::cin >> action;
 
-	//å…¥åŠ›ç¢ºèª
+	//“ü—ÍŠm”F
 	if (action == INPUTKEYWORD_SETUP) {
 		std::string equiped;
-		std::cout << "è£…å‚™ã—ãŸã„é­”æ³•ã‚’å…¥åŠ›ãã ã•ã„ï¼š ";
+		std::cout << "‘•”õ‚µ‚½‚¢–‚–@‚ğ“ü—Í‚­‚¾‚³‚¢F ";
 		std::cin >> equiped;
 
-		if (equiped == INPUTKEYWORD_FIRE) {			//ç«è£…å‚™
+		if (equiped == INPUTKEYWORD_FIRE) {			//‰Î‘•”õ
 			this->setup(SkillType::Fire);
 		}
-		else if (equiped == INPUTKEYWORD_ICE) {		//æ°·è£…å‚™
+		else if (equiped == INPUTKEYWORD_ICE) {		//•X‘•”õ
 			this->setup(SkillType::Ice);
 		}
-		else if (equiped == INPUTKEYWORD_ROCK) {	//å²©è£…å‚™
+		else if (equiped == INPUTKEYWORD_ROCK) {	//Šâ‘•”õ
 			this->setup(SkillType::Rock);
 		}
 		else {
 			std::cout << "cannot find the current skill" << std::endl;
 		}
 	}
-	else if (action == INPUTKEYWORD_USE) {			//ã‚¹ã‚­ãƒ«ä½¿ç”¨
+	else if (action == INPUTKEYWORD_USE) {			//ƒXƒLƒ‹g—p
 		if (this->equipedSkill) {
 			this->equipedSkill->use();
 		}
 		else {
-			std::cout << "æœªè£…å‚™" << std::endl;
+			std::cout << "–¢‘•”õ" << std::endl;
 		}
 	}
-	else if (action == INPUTKEYWORD_EXIT) {			//ãƒ—ãƒ­ã‚°ãƒ©ãƒ çµ‚äº†
+	else if (action == INPUTKEYWORD_EXIT) {			//ƒvƒƒOƒ‰ƒ€I—¹
 		return false;
 	}
 	else {
@@ -97,7 +97,7 @@ bool Character::update() {
 }
 
 /// <summary>
-/// è£…å‚™å¤–ã—
+/// ‘•”õŠO‚µ
 /// </summary>
 void Character::resetSkill() {
 	delete this->equipedSkill;

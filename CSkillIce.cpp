@@ -1,20 +1,20 @@
 /*
 * @fileName:	CSkillIce.cpp
-* @brief:		ã‚¹ã‚­ãƒ«(æ°·)ã‚¯ãƒ©ã‚¹
+* @brief:		ƒXƒLƒ‹(•X)ƒNƒ‰ƒX
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
 #include "CSkillIce.h"
 
 CSkillIce::CSkillIce() {
-	this->m_skillName = "æ°·";
+	this->m_skillName = "•X";
 	this->m_baseDamage = 20;
 	this->m_addDamage = 40;
 	this->m_baseDamageCount = 1;
 }
 
 CSkillIce::~CSkillIce() {
-	std::cout << "CSkillIce ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿" << std::endl;
+	std::cout << "CSkillIce ƒfƒXƒgƒ‰ƒNƒ^" << std::endl;
 }
 
 void CSkillIce::use() {
@@ -22,17 +22,17 @@ void CSkillIce::use() {
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤å–å¾—
+/// ƒ_ƒ[ƒW’læ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤</returns>
+/// <returns>ƒ_ƒ[ƒW’l</returns>
 int CSkillIce::getDamage() const {
 	return this->m_baseDamage + (rand() % (this->m_addDamage + 1));
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°å–å¾—
+/// ƒ_ƒ[ƒW‰ñ”æ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°</returns>
+/// <returns>ƒ_ƒ[ƒW‰ñ”</returns>
 int CSkillIce::getDamageCount() const {
 	return this->m_baseDamageCount;
 }

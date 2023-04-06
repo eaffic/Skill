@@ -1,6 +1,6 @@
 /*
 * @fileName:	Character.h
-* @brief:		ã‚­ãƒ£ãƒ©ã‚¯ã‚¿åŸºåº•ã‚¯ãƒ©ã‚¹ãƒ˜ãƒƒãƒ€ãƒ•ã‚¡ã‚¤ãƒ«
+* @brief:		ƒLƒƒƒ‰ƒNƒ^Šî’êƒNƒ‰ƒXƒwƒbƒ_ƒtƒ@ƒCƒ‹
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
@@ -12,12 +12,12 @@
 #include "CSkillRock.h"
 
 /// <summary>
-/// ã‚¹ã‚­ãƒ«ã‚¿ã‚¤ãƒ—
+/// ƒXƒLƒ‹ƒ^ƒCƒv
 /// </summary>
 enum class SkillType {
-	Fire,		//ã‚¹ã‚­ãƒ«(ç«)
-	Ice,		//ã‚¹ã‚­ãƒ«(æ°·)
-	Rock,		//ã‚¹ã‚­ãƒ«(å²©)
+	Fire,		//ƒXƒLƒ‹(‰Î)
+	Ice,		//ƒXƒLƒ‹(•X)
+	Rock,		//ƒXƒLƒ‹(Šâ)
 };
 
 class Character {
@@ -31,5 +31,5 @@ public:
 	void resetSkill();
 
 protected:
-	CSkillBase* equipedSkill;	//ç¾åœ¨ã®è£…å‚™ã‚¹ã‚­ãƒ«
+	CSkillBase* equipedSkill;	//Œ»İ‚Ì‘•”õƒXƒLƒ‹
 };

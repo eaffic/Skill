@@ -7,7 +7,7 @@ int main() {
 	while (loop) {
 		loop = character.update();
 	}
-	std::cout << "ãƒ—ãƒ­ã‚°ãƒ©ãƒ çµ‚äº†" << std::endl;
+	std::cout << "ƒvƒƒOƒ‰ƒ€I—¹" << std::endl;
 
 	return 0;
 }

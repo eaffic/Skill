@@ -1,19 +1,19 @@
 /*
 * @fileName:	CSkillBase.cpp
-* @brief:		ã‚¹ã‚­ãƒ«åŸºåº•ã‚¯ãƒ©ã‚¹
+* @brief:		ƒXƒLƒ‹Šî’êƒNƒ‰ƒX
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
 #include "CSkillBase.h"
 
 /// <summary>
-/// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+/// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 /// </summary>
 CSkillBase::CSkillBase() {
 	auto now = std::chrono::high_resolution_clock::now();
 	srand((unsigned int)std::chrono::duration_cast<std::chrono::microseconds>(now.time_since_epoch()).count());
 
-	this->m_skillName = "ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ";
+	this->m_skillName = "ƒfƒtƒHƒ‹ƒg";
 	this->m_baseDamage = 0;
 	this->m_addDamage = 0;
 	this->m_baseDamageCount = 1;
@@ -21,38 +21,38 @@ CSkillBase::CSkillBase() {
 }
 
 CSkillBase::~CSkillBase() {
-	std::cout << "CSkillBase ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿" << std::endl;
+	std::cout << "CSkillBase ƒfƒXƒgƒ‰ƒNƒ^" << std::endl;
 }
 
 /// <summary>
-/// ã‚¹ã‚­ãƒ«ä½¿ç”¨(ãƒ€ãƒ¡ãƒ¼ã‚¸å±•ç¤º)
+/// ƒXƒLƒ‹g—p(ƒ_ƒ[ƒW“W¦)
 /// </summary>
 void CSkillBase::use() {
 	for (int i = 0; i < this->getDamageCount(); ++i) {
-		std::cout << "ã‚¹ã‚­ãƒ«ï¼š" << this->getName()  << "\t" << this->getDamage() << " ãƒ€ãƒ¡ãƒ¼ã‚¸" << std::endl;
+		std::cout << "ƒXƒLƒ‹F" << this->getName()  << "\t" << this->getDamage() << " ƒ_ƒ[ƒW" << std::endl;
 	}
 }
 
 /// <summary>
-/// ã‚¹ã‚­ãƒ«åå–å¾—
+/// ƒXƒLƒ‹–¼æ“¾
 /// </summary>
-/// <returns>ã‚¹ã‚­ãƒ«å</returns>
+/// <returns>ƒXƒLƒ‹–¼</returns>
 std::string CSkillBase::getName() const {
 	return this->m_skillName;
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤å–å¾—
+/// ƒ_ƒ[ƒW’læ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤</returns>
+/// <returns>ƒ_ƒ[ƒW’l</returns>
 int CSkillBase::getDamage() const {
 	return 0;
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°å–å¾—
+/// ƒ_ƒ[ƒW‰ñ”æ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°</returns>
+/// <returns>ƒ_ƒ[ƒW‰ñ”</returns>
 int CSkillBase::getDamageCount() const {
 	return 0;
 }

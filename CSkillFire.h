@@ -1,6 +1,6 @@
 /*
 * @fileName:	CSkillFire.h
-* @brief:		繧ｹ繧ｭ繝ｫ(轣ｫ)繧ｯ繝ｩ繧ｹ繝倥ャ繝繝輔ぃ繧､繝ｫ
+* @brief:		スキル(火)クラスヘッダファイル
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */

@@ -1,19 +1,19 @@
 /*
 * @fileName:	CSkillFire.cpp
-* @brief:		ã‚¹ã‚­ãƒ«(ç«)ã‚¯ãƒ©ã‚¹
+* @brief:		ƒXƒLƒ‹(‰Î)ƒNƒ‰ƒX
 * @author:		hsu_chungwei
 * @date:		2023/04/06
 */
 #include "CSkillFire.h"
 
 CSkillFire::CSkillFire() {
-	this->m_skillName = "ç«";
+	this->m_skillName = "‰Î";
 	this->m_baseDamage = 50;
 	this->m_baseDamageCount = 1;
 }
 
 CSkillFire::~CSkillFire() {
-	std::cout << "CSkillFire ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿" << std::endl;
+	std::cout << "CSkillFire ƒfƒXƒgƒ‰ƒNƒ^" << std::endl;
 }
 
 void CSkillFire::use() {
@@ -21,17 +21,17 @@ void CSkillFire::use() {
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤å–å¾—
+/// ƒ_ƒ[ƒW’læ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å€¤</returns>
+/// <returns>ƒ_ƒ[ƒW’l</returns>
 int CSkillFire::getDamage() const {
 	return this->m_baseDamage;
 }
 
 /// <summary>
-/// ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°å–å¾—
+/// ƒ_ƒ[ƒW‰ñ”æ“¾
 /// </summary>
-/// <returns>ãƒ€ãƒ¡ãƒ¼ã‚¸å›æ•°</returns>
+/// <returns>ƒ_ƒ[ƒW‰ñ”</returns>
 int CSkillFire::getDamageCount() const {
 	return this->m_baseDamageCount;
 }
