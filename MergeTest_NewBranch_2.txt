@@ -6,3 +6,6 @@ Develop Branch
 dwdqdw
 
 dqwdqwdw
+
+
+conflict2 --- destorycontent

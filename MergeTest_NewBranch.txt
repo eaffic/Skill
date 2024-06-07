@@ -17,3 +17,6 @@ asdasdasdasd
 dasdasdf
 
 conflict1
+
+
+conflict2 --- destorycontent
